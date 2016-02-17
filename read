@@ -1,0 +1,7 @@
+mpicc -c cal.c
+mpicc -c  read.c
+mpicc -c  small.c
+ 
+mpicc read.o small.o  cal.o -I/home/ashwin/lammps-6Apr13/src -L/home/ashwin/lammps-6Apr13/src  -lfftw3 -lm -lstdc++  -lrt  -lpthread
+
+rm *.o
